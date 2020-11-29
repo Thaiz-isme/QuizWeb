@@ -1,0 +1,52 @@
+[
+    {
+        "question":"Hyper Text Markup Language Stand For?", 
+        "choices":["JavaScript", "XHTML","CSS", "HTML"], 
+        "answer": "HTML"
+    },
+    {
+        "question":"Which language is used for styling web pages?", 
+        "choices":["HTML", "JQuery", "CSS", "XML"], 
+        "answer": "CSS"
+    },
+    {
+        "question":"Which is not a JavaScript Framework?", 
+        "choices":["Python Script", "JQuery","Django", "NodeJS"], 
+        "answer": "Django"
+    },
+    {
+        "question":"Which is used for Connect To Database?", 
+        "choices":["PHP", "HTML", "JS", "All"], 
+        "answer":"PHP"
+    },
+    {
+        "question":"Webdevtrick.com is about..", 
+        "choices":["Web Design", "Graphic Design", "SEO & Development", "All"], 
+        "answer":"All"
+    },
+    {
+        "question":"What is 1+1=?", 
+        "choices":["1", "2", "3", "4"], 
+        "answer":"2"
+    },
+    {
+        "question":"Who is the most handsome boy?", 
+        "choices":["Tien", "Kiet", "Thai", "Nhan"], 
+        "answer":"Tien"
+    },
+    {
+        "question":"What do you do?", 
+        "choices":["Dentist", "Doctor", "Dev", "Hacker"], 
+        "answer":"Hacker"
+    },
+    {
+        "question":"What is 2^6", 
+        "choices":["I don't know", "231", "423", "64"], 
+        "answer":"64"
+    },
+    {
+        "question":"Who is the champion in RapViet show 2020", 
+        "choices":["G-Ducky", "Ricky Star", "De Choat", "Yuno Bigboy"], 
+        "answer":"De Choat"
+    }
+]

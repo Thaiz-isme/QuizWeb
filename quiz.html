@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- code by webdevtrick (https://webdevtrick.com) -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+
+<body style="background-color: #D5D8DC">
+    <div class="header">
+        <label>
+            <img src="logo.png" style="display:inline;text-align:justify;" usemap="#myMap"/>
+                <map name="myMap">
+                    <area shape="rect" coords="0, 0, 64, 64" href="quiz.html"/>
+                </map>
+        </label>
+        <a id="tickQuiz" href="quiz.html">Tick QUIZ</a>
+
+        <div class="menuBar">
+            <a href="">Home</a>
+            <div class="dropdown">
+                <button class="dropButton">Subjects 
+                </button>
+                <div class="dropdownContent">
+                    <a href="">Subject 1</a>
+                    <a href="">Subject 2</a>
+                    <a href="">Sucject 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropButton">Scoreboard 
+                </button>
+                <div class="dropdownContent">
+                    <a href="">Subject 1</a>
+                    <a href="">Subject 2</a>
+                    <a href="">Sucject 3</a>
+                </div>
+            </div>
+            <a href="">Info</a>
+        </div>
+    </div>
+    <div class="contain">
+        <div id="subject"> Subject:  </div>
+        
+        <div id="container">
+            <div id="qFrame" style="display: none;">
+                <div id="QuestionContainer" style="display:block;">
+                    
+                    <h2 style="margin-left:30px" id="questionNum"></h2>
+                    
+                    <div id="question">
+    
+                    </div>
+    
+                    <div id="answerContainer">
+                        <button value="0" id="button0" name="answer" class="aButton">
+                                <label id="label0" class="label"></label>
+                            </button>
+    
+                        <button value="1" id="button1" name="answer" class="aButton">
+                                <label id="label1" class="label"></label>
+                            </button>
+    
+                        <button value="2" id="button2" name="answer" class="aButton">   
+                                <label id="label2" class="label"></label>
+                            </button>
+    
+                        <button value="3" id="button3" name="answer" class="aButton">
+                                <label id="label3" class="label"></label>
+                            </button>
+    
+                    </div>
+    
+                </div>
+            
+
+                <div id="backButton" style="display:inline-block;"> 
+                    <button id="back" class="navButton" value="back" onclick="moveTo(this.value)"> Back </button>
+                </div>
+
+                <div id="nextButton" style="display:inline-block;">
+                    <button id="next" class="navButton" value="next" onclick="moveTo(this.value)"> Next </button>
+                </div>
+            </div>
+
+            <div id="incorrect" style="display:none"> <img src="incorrect.gif" id="incorrectImg" /> </div>
+            <div id="good" style="display: none;"> <img src="good.gif" id="correctImg" /> </div>
+
+            <div id="getName">
+                <button id="myButton">Start</button>
+                <div id="myModal" class="modal">
+                    <div class="modalContent">
+                        <p style="font-size: 24px;font-weight: bolder;"> Enter your name </p>
+                        <input id="nameInput" type="text">
+                        <button class="close">Ok</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="questionNagigator">
+            <div style="background-color:#70CC8C;"> 
+                <label id="timeLeft"> Time left: </label> <div id='timer'></div> 
+            </div>
+            <button id="q0" class="qButton" value="0" style="left:15%; top:19%" onclick="moveTo(this.value)">01</button>
+            <button id="q1" class="qButton" value="1" style="left:40%; top:19%" onclick="moveTo(this.value)">02</button>
+            <button id="q2" class="qButton" value="2" style="left:65%; top:19%" onclick="moveTo(this.value)">03</button>
+            <button id="q3" class="qButton" value="3" style="left:15%; top:39%" onclick="moveTo(this.value)">04</button>
+            <button id="q4" class="qButton" value="4" style="left:40%; top:39%" onclick="moveTo(this.value)">05</button>
+            <button id="q5" class="qButton" value="5" style="left:65%; top:39%" onclick="moveTo(this.value)">06</button>
+            <button id="q6" class="qButton" value="6" style="left:15%; top:59%" onclick="moveTo(this.value)">07</button>
+            <button id="q7" class="qButton" value="7" style="left:40%; top:59%" onclick="moveTo(this.value)">08</button>
+            <button id="q8" class="qButton" value="8" style="left:65%; top:59%" onclick="moveTo(this.value)">09</button>
+            <button id="q9" class="qButton" value="9" style="left:40%; top:79%" onclick="moveTo(this.value)">10</button>
+        </div>
+
+        <script src="test.js"></script>
+        <script src="problem.js"></script>
+        <script src="main.js"></script>
+        
+        
+    </div>
+</body>
+
+</html>
