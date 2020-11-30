@@ -44,10 +44,10 @@ let Quiz = function(problems) {
                     document.getElementById("button" + i).disabled = true;
 
                 if (this.currentProblem.keyId == this.currentProblem.answerId)
-                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
+                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "green";
                 else
                 {
-                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
+                    document.getElementById(this.currentProblem.keyId).style.backgroundColor = "green";
                     document.getElementById(this.currentProblem.answerId).style.backgroundColor = "red";
                 }
             }
@@ -66,7 +66,7 @@ let Quiz = function(problems) {
             if (this.currentProblem.isCorrectAnswer(answer)) {
                 this.score++;
 
-                document.getElementById(id).style.backgroundColor = 'yellow';
+                document.getElementById(id).style.backgroundColor = 'green';
                 this.currentProblem.done = true;
                 this.questionAnswered++;
                 this.currentProblem.answerId = id;
@@ -87,7 +87,7 @@ let Quiz = function(problems) {
             else {
                 this.currentProblem.getKeyId();
                 document.getElementById(id).style.backgroundColor = 'red';
-                document.getElementById(this.currentProblem.keyId).style.backgroundColor = "yellow";
+                document.getElementById(this.currentProblem.keyId).style.backgroundColor = "green";
                 document.getElementById("q" + this.index).style.backgroundColor = "red";
 
                 this.currentProblem.answerId = id;
@@ -121,7 +121,7 @@ let Quiz = function(problems) {
         self.disableAllButton(false);
         for (let i = 0; i < this.currentProblem.choices.length; i++) {
             var tag = 'button' + i;
-            document.getElementById(tag).style.backgroundColor = '#01BBFF';
+            document.getElementById(tag).style.backgroundColor = '#100248';
         }
     }
 

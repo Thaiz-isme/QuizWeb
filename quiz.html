@@ -11,22 +11,22 @@
 <body style="background-color: #D5D8DC">
     <div class="header">
         <label>
-            <img src="logo.png" style="display:inline;text-align:justify;" usemap="#myMap"/>
+            <img src="../Animation/logo.png" style="display:inline;text-align:justify;" usemap="#myMap"/>
                 <map name="myMap">
-                    <area shape="rect" coords="0, 0, 64, 64" href="quiz.html"/>
+                    <area shape="rect" coords="0, 0, 64, 64" href="../mainPage.html"/>
                 </map>
         </label>
-        <a id="tickQuiz" href="quiz.html">Tick QUIZ</a>
+        <a id="tickQuiz" href="../mainPage.html">Tick QUIZ</a>
 
         <div class="menuBar">
-            <a href="">Home</a>
+            <a href="../mainPage.html">Home</a>
             <div class="dropdown">
                 <button class="dropButton">Subjects 
                 </button>
                 <div class="dropdownContent">
-                    <a href="">Subject 1</a>
-                    <a href="">Subject 2</a>
-                    <a href="">Sucject 3</a>
+                    <a href="quiz.html">Geography</a>
+                    <a href="../History/quiz.html">History</a>
+                    <a href="../Science/quiz.html">Science</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -35,20 +35,20 @@
                 <div class="dropdownContent">
                     <a href="">Subject 1</a>
                     <a href="">Subject 2</a>
-                    <a href="">Sucject 3</a>
+                    <a href="">Subject 3</a>
                 </div>
             </div>
             <a href="">Info</a>
         </div>
     </div>
     <div class="contain">
-        <div id="subject"> Subject:  </div>
+        <div id="subject" style="font-family:nerko;font-size: 54px;color:#7E5109"> Subject: Geography </div>
         
         <div id="container">
             <div id="qFrame" style="display: none;">
                 <div id="QuestionContainer" style="display:block;">
                     
-                    <h2 style="margin-left:30px" id="questionNum"></h2>
+                    <h2 style="margin-left:30px;color:#CF2005;" id="questionNum"></h2>
                     
                     <div id="question">
     
@@ -85,16 +85,16 @@
                 </div>
             </div>
 
-            <div id="incorrect" style="display:none"> <img src="incorrect.gif" id="incorrectImg" /> </div>
-            <div id="good" style="display: none;"> <img src="good.gif" id="correctImg" /> </div>
+            <div id="incorrect" style="display:none"> <img src="../Animation/incorrect.gif" id="incorrectImg" /> </div>
+            <div id="good" style="display: none;"> <img src="../Animation/good.gif" id="correctImg" /> </div>
 
             <div id="getName">
                 <button id="myButton">Start</button>
                 <div id="myModal" class="modal">
                     <div class="modalContent">
-                        <p style="font-size: 24px;font-weight: bolder;"> Enter your name </p>
+                        <p id="enterName" style="font-size: 36px;font-weight: bolder;"> Enter your name </p>
                         <input id="nameInput" type="text">
-                        <button class="close">Ok</button>
+                        <button id="close" class="close" style="font-family: robotoSlab;">Ok</button>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,8 @@
         </div>
 
 
-        <div id="questionNagigator">
-            <div style="background-color:#70CC8C;"> 
+        <div id="questionNavigator">
+            <div> 
                 <label id="timeLeft"> Time left: </label> <div id='timer'></div> 
             </div>
             <button id="q0" class="qButton" value="0" style="left:15%; top:19%" onclick="moveTo(this.value)">01</button>
@@ -121,8 +121,7 @@
         <script src="test.js"></script>
         <script src="problem.js"></script>
         <script src="main.js"></script>
-        
-        
+            
     </div>
 </body>
 

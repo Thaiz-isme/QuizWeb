@@ -1,14 +1,14 @@
 var problems = [
-    new Problem("Hyper Text Markup Language Stand For?", ["JavaScript", "XHTML", "CSS", "HTML"], "HTML"),
-    new Problem("Which language is used for styling web pages?", ["HTML", "JQuery", "CSS", "XML"], "CSS"),
-    new Problem("Which is not a JavaScript Framework?", ["Python Script", "JQuery", "Django", "NodeJS"], "Django"),
-    new Problem("Which is used for Connect To Database?", ["PHP", "HTML", "JS", "All"], "PHP"),
-    new Problem("Webdevtrick.com is about..", ["Web Design", "Graphic Design", "SEO & Development", "All"], "All"),
-    new Problem("What is 1+1=?", ["1", "2", "3", "4"], "2"),
-    new Problem("Who is the most handsome boy?", ["Tien", "Kiet", "Thai", "Nhan"], "Tien"),
-    new Problem("What do you do?", ["Dentist", "Doctor", "Dev", "Hacker"], "Hacker"),
-    new Problem("What is 2^6", ["I don't know", "231", "423", "64"], "64"),
-    new Problem("Who is the champion in RapViet show 2020", ["G-Ducky", "Ricky Star", "De Choat", "Yuno Bigboy"], "De Choat")
+    new Problem("In which country would you be if you were visiting the Taj Mahal?", ["India", "French", "Pakistan", "Canada"], "India"),
+    new Problem("In which continent is the world’s longest river?", ["Asia", "Europe", "Africa", "South America"], "Africa"),
+    new Problem("What is the only major city located on two continents?", ["Marseille", "Istanbul", "Hamburg", "Mumbai"], "Istanbul"),
+    new Problem("What is the official language of the Canadian province Quebec?", ["English", "French", "Spanish", "Hebrew"], "French"),
+    new Problem("Which country has the most volcanoes?", ["Japan", "Indonesia", "Australia", "Canada"], "Indonesia"),
+    new Problem('What country is called "Land of Fire and Ice"?', ["Russia", "Canada", "Greenland", "Iceland"], "Iceland"),
+    new Problem("What river flows through Paris?", ["Seine", "Volga", "Main", "Thames"], "Seine"),
+    new Problem("Havana is the capital of what country?", ["Spain", "Cuba", "Costa Rica", "Afganistan"], "Cuba"),
+    new Problem("Which ocean is Bermuda in?", ["Atlantic", "Pacific", "Indian", "Southern"], "Atlantic"),
+    new Problem("What is the smallest country in the world?", ["Monaco", "Vatican", "Maldives", "Tuvalu"], "Vatican")
 ];
 
 var quiz = new Quiz(problems);
@@ -61,7 +61,7 @@ function showStats(){
         `<div id="mainContain">
             <p id="font"><b>Your Result</b></p>
             <div id="link">
-                <a class="rank" style="text-decoration: none;" href=""><b>Your Ranking</b></a>
+                <a class="rank" style="text-decoration: none; text-align:center;" href=""><b>Your Ranking</b></a>
             </div>
             <div id="score">
                 <h1 id="text"><b>YOUR SCORE</b></h1>
@@ -72,13 +72,13 @@ function showStats(){
                 <b style="float: left; margin-left: 80px;">Time</b>
                 <div id="timeResult"></div>
             </div>
-        </div>
+        </div>`;
 
-    </div>`;
     document.getElementById('scoreBoard').innerHTML = quiz.score + "/" + quiz.problems.length;
-   
     myStopFunction();
 }
+
+/* ------------------- */
 
 // --------------------------- //
 
@@ -88,6 +88,7 @@ var close = document.getElementsByClassName("close")[0];
 
 button.onclick = function() {
     modal.style.display = "block";
+    pressEnter();
 }
 
 close.onclick = function() {
@@ -101,6 +102,15 @@ window.onclick = function(event) {
     }
 }
 
+function pressEnter(){
+    var input = document.getElementById("nameInput");
+    input.addEventListener("keyup", function(event){
+        if (event.keyCode == 13){
+            event.preventDefault();
+            document.getElementById("close").click();
+        }
+    });
+}
 
 /* ----------------- */
 

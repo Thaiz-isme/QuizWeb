@@ -4,7 +4,7 @@
 function quizTimer(ss) {
     if(ss < 0) ss = 0;
     
-    var idVar = setInterval(() => {
+    var idVar = setInterval(() => { 
         if (ss >= 0){
             var minute = Math.floor(ss / 60);
             if (minute / 10 < 1) minute = "0" + minute;
